@@ -7,6 +7,9 @@ npm install body-parser
 npm install request
 npm install mqtt
 
+export LINE_ACCESS_TOKEN=XXXXXXXX
+export MQTT_PASSWD=XXXXXXXX
+
 node index.js
 ```
 
