@@ -1,0 +1,12 @@
+{
+  "name": "tasmota-linebot-nodejs",
+  "version": "1.0.0",
+  "description": "``` # Usage: npm install express npm install body-parser npm install request npm install mqtt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
