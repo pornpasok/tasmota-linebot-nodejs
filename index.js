@@ -202,4 +202,6 @@ function ledOff (sender, text) {
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
+  console.log('LINE_ACCESS_TOKEN', process.env.LINE_ACCESS_TOKEN)
+  console.log('MQTT_PASSWD', process.env.MQTT_PASSWD)
 })
