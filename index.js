@@ -6,7 +6,7 @@ var app = express()
 var mqtt = require('mqtt');
 
 // Your Channel access token (long-lived) 
-const CH_ACCESS_TOKEN = 'XXXXXXXX';
+const LINE_ACCESS_TOKEN = process.env.LINE_ACCESS_TOKEN;
 
 // MQTT Topic 
 var mqtt_topic = 'cmnd/tasmota_275F1C/POWER'; // Your tasmota_%06X
@@ -17,7 +17,7 @@ var options = {
     port: 8883,
     protocol: 'mqtts',
     username: 'tonotech',
-    password: 'XXXXXXXX'
+    password: process.env.MQTT_PASSWD
 }
 
 app.use(bodyParser.json())
@@ -67,7 +67,7 @@ function sendText (sender, text) {
   request({
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer '+CH_ACCESS_TOKEN+''
+      'Authorization': 'Bearer '+LINE_ACCESS_TOKEN+''
     },
     url: 'https://api.line.me/v2/bot/message/push',
     method: 'POST',
@@ -93,7 +93,7 @@ function inFo (sender, text) {
   request({
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer '+CH_ACCESS_TOKEN+''
+      'Authorization': 'Bearer '+LINE_ACCESS_TOKEN+''
     },
     url: 'https://api.line.me/v2/bot/message/push',
     method: 'POST',
@@ -141,7 +141,7 @@ function ledOn (sender, text) {
   request({
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer '+CH_ACCESS_TOKEN+''
+      'Authorization': 'Bearer '+LINE_ACCESS_TOKEN+''
     },
     url: 'https://api.line.me/v2/bot/message/push',
     method: 'POST',
@@ -187,7 +187,7 @@ function ledOff (sender, text) {
   request({
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer '+CH_ACCESS_TOKEN+''
+      'Authorization': 'Bearer '+LINE_ACCESS_TOKEN+''
     },
     url: 'https://api.line.me/v2/bot/message/push',
     method: 'POST',

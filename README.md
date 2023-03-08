@@ -10,7 +10,7 @@ npm install mqtt
 node index.js
 ```
 
-![LINE Chat Bot On/Off ESP32 LED](images/tasmota-linebot-03.png)
+![LINE Chat Bot On/Off ESP32 LED](images/tasmota-linebot-03.jpg)
 
 
 Config Tasmota with MQTT Server
