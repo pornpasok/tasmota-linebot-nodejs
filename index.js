@@ -17,7 +17,7 @@ var options = {
     port: 8883,
     protocol: 'mqtts',
     username: 'tonotech',
-    password: 'mqttpasswd'
+    password: process.env.MQTT_PASSWD
 }
 
 app.use(bodyParser.json())
